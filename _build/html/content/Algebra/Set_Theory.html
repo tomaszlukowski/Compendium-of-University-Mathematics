@@ -42,6 +42,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -201,6 +203,51 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-of-sets">
+   3.1. Definition of sets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sets-and-their-elements">
+     3.1.1. Sets and their elements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subsets">
+     3.1.2. Subsets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#empty-set">
+     3.1.3. Empty set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equal-sets">
+     3.1.4. Equal sets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#power-set">
+     3.1.5. Power set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cardinality">
+     3.1.6. Cardinality
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -211,6 +258,78 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="set-theory">
 <h1><span class="section-number">3. </span>Set Theory<a class="headerlink" href="#set-theory" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="definition-of-sets">
+<h2><span class="section-number">3.1. </span>Definition of sets<a class="headerlink" href="#definition-of-sets" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sets-and-their-elements">
+<h3><span class="section-number">3.1.1. </span>Sets and their elements<a class="headerlink" href="#sets-and-their-elements" title="Permalink to this headline">¶</a></h3>
+<p>Basic notion in set theory is a <span style='color:blue'><em>set</em></span>. A set is a collections of <span style='color:blue'><em>elements</em></span>. We say that <em><span class="math notranslate nohighlight">\(a\)</span> is an element of set <span class="math notranslate nohighlight">\(A\)</span></em> or <em><span class="math notranslate nohighlight">\(a\)</span> is not an element of set <span class="math notranslate nohighlight">\(A\)</span></em>, and we write it as <span class="math notranslate nohighlight">\(a\in A\)</span> and <span class="math notranslate nohighlight">\(a\not\in A\)</span>, respectively. A given set can be for example described by listing all its elements, in this case we use the curly brackets to write <span class="math notranslate nohighlight">\(A=\{a,b,c,d\}\)</span>. Alternatively, we can define sets by specifying the properties of its elements, for example <span class="math notranslate nohighlight">\(B=\{x:x\mbox{ is an even number}\}\)</span>. There are some commonly used sets for which we use specific symbols, for example:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbb{N}=\{1,2,\ldots\}\)</span> - the set of all natural numbers</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\}\)</span> - the set of all integers</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{Q}=\{\frac{p}{q}:p,q\in\mathbb{Z} \wedge q\neq 0\}\)</span> - the set of all fractions</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> - the set of all real numbers</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{C}\)</span> - the set of all complex numbers</p></li>
+</ul>
+<p>Two sets <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are <span style='color:blue'><em>equal</em></span> if and only if they have the same elements, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{A=B\Leftrightarrow \forall_{x} \,(x\in A\Leftrightarrow x\in B)}
+\]</div>
+<blockquote>
+<div><p>The sets <span class="math notranslate nohighlight">\(\{2,5,9,3,5\}\)</span> and <span class="math notranslate nohighlight">\(\{3,9,5,2\}\)</span> are equal.</p>
+</div></blockquote>
+</div>
+<div class="section" id="subsets">
+<h3><span class="section-number">3.1.2. </span>Subsets<a class="headerlink" href="#subsets" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are sets and</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\forall_x \,(x\in A\Rightarrow x\in B)}
+\]</div>
+<p>then <span class="math notranslate nohighlight">\(A\)</span> is called a <span style='color:blue'><em>subset</em></span> of <span class="math notranslate nohighlight">\(B\)</span> and denote it by <span class="math notranslate nohighlight">\(A\subseteq B\)</span>. In other words, <span class="math notranslate nohighlight">\(A\)</span> is a subset of <span class="math notranslate nohighlight">\(B\)</span> if all elements of set <span class="math notranslate nohighlight">\(A\)</span> are also elements of set <span class="math notranslate nohighlight">\(B\)</span>. It is always true that <span class="math notranslate nohighlight">\(A\subseteq A\)</span>. In the case when <span class="math notranslate nohighlight">\(A\subseteq B\)</span> and there exist element of set <span class="math notranslate nohighlight">\(B\)</span> that are not elements of set <span class="math notranslate nohighlight">\(A\)</span>, then we call set <span class="math notranslate nohighlight">\(A\)</span> a proper subset of <span class="math notranslate nohighlight">\(B\)</span> and denote it by <span class="math notranslate nohighlight">\(A\subset B\)</span>.</p>
+<p><em><strong>Add picture of a subset</strong></em></p>
+<blockquote>
+<div><p>Let <span class="math notranslate nohighlight">\(A=\{2,4,6,8\}\)</span> and <span class="math notranslate nohighlight">\(B=\{1,2,3,4,5,6,7,8,9,10\}\)</span>. Then <span class="math notranslate nohighlight">\(A\subset B\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="empty-set">
+<h3><span class="section-number">3.1.3. </span>Empty set<a class="headerlink" href="#empty-set" title="Permalink to this headline">¶</a></h3>
+<p>The set that does not contain any elements is called the <span style='color:blue'><em>empty set</em></span> and it is usually denoted by <span class="math notranslate nohighlight">\(\emptyset\)</span>.</p>
+<blockquote>
+<div><p>The set <span class="math notranslate nohighlight">\(\{x\in \mathbb{R}:x^2=-1\}\)</span> is empty since there is no real number that when squared gives <span class="math notranslate nohighlight">\(-1\)</span>.</p>
+</div></blockquote>
+<blockquote>
+<div><p>The empty set is a subset of any other set. In other words, for any set <span class="math notranslate nohighlight">\(A\)</span>, we can write <span class="math notranslate nohighlight">\(\emptyset \in A\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="equal-sets">
+<h3><span class="section-number">3.1.4. </span>Equal sets<a class="headerlink" href="#equal-sets" title="Permalink to this headline">¶</a></h3>
+<p>Two sets are equal if the first one is a subset of the second one and vice versa:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{A=B\Leftrightarrow (A\subseteq B\wedge B\subseteq A)}
+\]</div>
+</div>
+<div class="section" id="power-set">
+<h3><span class="section-number">3.1.5. </span>Power set<a class="headerlink" href="#power-set" title="Permalink to this headline">¶</a></h3>
+<p>The set containing as elements all subsets of a given set <span class="math notranslate nohighlight">\(A\)</span> is called the <span style='color:blue'><em>power set</em></span> of <span class="math notranslate nohighlight">\(A\)</span> and is denoted by <span class="math notranslate nohighlight">\(\mathcal{P}(A)\)</span>, i.e <span class="math notranslate nohighlight">\(\mathcal{P}(A)=\{B:B\subseteq A\}\)</span>.</p>
+<blockquote>
+<div><p>The power set of <span class="math notranslate nohighlight">\(A=\{a,1,\square\}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{P}(A)=\{\emptyset,\{a\},\{1\},\{\square\},\{a,1\},\{a,\square\},\{1,\square\},\{1,a,\square\}\}
+\]</div>
+</div></blockquote>
+<ul class="simple">
+<li><p>If the set <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(n\)</span> elements, then its power set <span class="math notranslate nohighlight">\(\mathcal{P}(A)\)</span> has <span class="math notranslate nohighlight">\(2^n\)</span> elements.</p></li>
+<li><p>For any set <span class="math notranslate nohighlight">\(A\)</span> it is always true that <span class="math notranslate nohighlight">\(\emptyset\in \mathcal{P}(A)\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="cardinality">
+<h3><span class="section-number">3.1.6. </span>Cardinality<a class="headerlink" href="#cardinality" title="Permalink to this headline">¶</a></h3>
+<p>The number of elements of a finite set <span class="math notranslate nohighlight">\(A\)</span> (a set with finite number of elements) is called its <span style='color:blue'><em>cardinality</em></span>, and is denoted by <span class="math notranslate nohighlight">\(|A|\)</span>.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
