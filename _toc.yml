@@ -1,0 +1,17 @@
+
+format: jb-book
+root: intro
+
+options:
+  numbered: true
+
+parts:
+  - caption: Arithmetics
+    numbered: True
+    chapters:
+    - file: content/Arithmetics/Elementary_Rules_Of_Calculation.ipynb
+  - caption: Algebra
+    numbered: True
+    chapters:
+    - file: content/Algebra/Logic.ipynb
+    - file: content/Algebra/Set_Theory.ipynb
