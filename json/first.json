@@ -7,4 +7,12 @@
         "front": "cardinality",
         "back": "The number of elements of a set."
     }
+     {
+        "front": "empty set",
+        "back": "A set with no elements."
+    }
+    {
+        "front": "power set",
+        "back": "The set containing all subsets of a given set."
+    }
 ]
