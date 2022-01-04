@@ -328,18 +328,8 @@
 <div class="section" id="cardinality">
 <h3><span class="section-number">3.1.6. </span>Cardinality<a class="headerlink" href="#cardinality" title="Permalink to this headline">¶</a></h3>
 <p>The number of elements of a finite set <span class="math notranslate nohighlight">\(A\)</span> (a set with finite number of elements) is called its <span style='color:blue'><em>cardinality</em></span>, and is denoted by <span class="math notranslate nohighlight">\(|A|\)</span>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jupytercards</span> <span class="kn">import</span> <span class="n">display_flashcards</span>
-
-<span class="n">display_flashcards</span><span class="p">(</span><span class="s1">&#39;../../json/first.json&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="output text_html"><style>
 :root{
 --asparagus: #87a878ff;
@@ -795,7 +785,7 @@ function createCards(id) {
 
 </script><script type="text/Javascript">
 
-    cardsTCNAxHcVCKIk=[
+    cardsYkuaaVdzoGVh=[
     {
         "front": "set",
         "back": "Collection of elements."
@@ -807,21 +797,23 @@ function createCards(id) {
 ]
 ;
 
-        createCards("TCNAxHcVCKIk");
+
+        {
+        const jmscontroller = new AbortController();
+        const signal = jmscontroller.signal;
+
+        setTimeout(() => jmscontroller.abort(), 5000);
+
+        fetch("https://raw.githubusercontent.com/tomaszlukowski/Compendium-of-University-Mathematics/main/json/first.json", {signal})
+        .then(response => response.json())
+        .then(json => createCards("YkuaaVdzoGVh"))
+        .catch(err => {
+        console.log("Fetch error or timeout");
+        createCards("YkuaaVdzoGVh");
+        });
+        }
         </script>
-        <div style="height:40px"></div><div class="flip-container" id="TCNAxHcVCKIk" onclick="flip(this)"></div><div style="height:40px"></div><div class="next" id="TCNAxHcVCKIk-next" onclick="checkFlip('TCNAxHcVCKIk')"> </div> <div style="height:40px"></div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
+        <div style="height:40px"></div><div class="flip-container" id="YkuaaVdzoGVh" onclick="flip(this)"></div><div style="height:40px"></div><div class="next" id="YkuaaVdzoGVh-next" onclick="checkFlip('YkuaaVdzoGVh')"> </div> <div style="height:40px"></div></div></div>
 </div>
 </div>
 </div>
