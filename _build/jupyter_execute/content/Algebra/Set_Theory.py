@@ -66,6 +66,20 @@
 # 
 # The number of elements of a finite set $A$ (a set with finite number of elements) is called its <span style='color:blue'>*cardinality*</span>, and is denoted by $|A|$. 
 
+# In[12]:
+
+
+from jupytercards import display_flashcards
+
+display_flashcards('../../json/first.json')
+
+
+# In[11]:
+
+
+2+2
+
+
 # In[ ]:
 
 

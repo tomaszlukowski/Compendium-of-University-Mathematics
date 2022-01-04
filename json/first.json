@@ -1,0 +1,10 @@
+[
+    {
+        "front": "set",
+        "back": "Collection of elements."
+    },
+    {
+        "front": "cardinality",
+        "back": "The number of elements of a set."
+    }
+]
